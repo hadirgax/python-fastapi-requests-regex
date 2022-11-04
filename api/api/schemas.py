@@ -42,3 +42,13 @@ class UsersList(BaseModel):
 
 class UsersListWebsite(BaseModel):
     websites: List[UserWebsite]
+
+
+class UserDetails(BaseModel):
+    name: str
+    email: str
+    company: str
+
+
+class UsersListDetails(BaseModel):
+    users: List[UserDetails]
