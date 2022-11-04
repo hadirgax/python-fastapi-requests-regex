@@ -3,10 +3,6 @@ from typing import List
 from pydantic import BaseModel
 
 
-class UserWebsite(BaseModel):
-    website: str
-
-
 class UserGeo(BaseModel):
     lat: float
     lng: float
@@ -26,15 +22,22 @@ class UserCompany(BaseModel):
     bs: str
 
 
-class UserSchema(BaseModel):
+class UserWebsite(BaseModel):
+    website: str
+
+
+class UserSchema(UserWebsite):
     id: int
     name: str
     username: str
     email: str
     address: UserAddress
     phone: str
-    website: UserWebsite
     company: UserCompany
+
+
+class UsersList(BaseModel):
+    __root__: List[UserSchema]
 
 
 class UsersListWebsite(BaseModel):
