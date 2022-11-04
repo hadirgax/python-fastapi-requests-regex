@@ -1,0 +1,14 @@
+*.egg-info
+.cache
+.idea
+*.pyc
+**/__pycache__
+htmlcov
+.coverage
+*/wheelhouse
+.DS_Store
+**/*.log
+**/build
+**/package
+.vscode
+*/.run/

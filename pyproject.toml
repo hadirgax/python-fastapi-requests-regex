@@ -1,0 +1,28 @@
+[tool.isort]
+profile = "black"
+known_standard_library = [
+    "csv",
+    "typing",
+    "copy",
+    "os",
+    "token",
+    "math",
+    "sys",
+    "json",
+    "time",
+    "select",
+    "datetime",
+    "re",
+    "collections",
+    "http",
+    "sqlite3",
+]
+known_third_party = [
+    "fastapi",
+    "pydantic",
+    "starlette",
+    "pytest",
+]
+
+[tool.black]
+line-length = 99
