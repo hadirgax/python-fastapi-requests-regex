@@ -1,4 +1,4 @@
-name: laranja
+name: pythonenv
 channels:
 - conda-forge
 dependencies:

@@ -1,4 +1,4 @@
-ENV_NAME ?= laranja
+ENV_NAME ?= pythonenv
 
 #### Hooks ####
 
