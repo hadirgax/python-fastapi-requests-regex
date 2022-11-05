@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-
 echo "Local Smoke Test"
 STD_APP_URL=http://localhost:8000
 echo
@@ -13,9 +12,18 @@ echo ${STD_APP_URL}${ENDPOINT}
 curl -s -XGET  "${STD_APP_URL}${ENDPOINT}" | jq .
 echo
 
+
 # Test: Get list of users details ordered
 echo "=== Get list of users details ordered ==="
 ENDPOINT=/api/users/detail
+echo ${STD_APP_URL}${ENDPOINT}
+curl -s -XGET  "${STD_APP_URL}${ENDPOINT}" | jq .
+echo
+
+
+# Test: Get list of users that match name
+echo "=== Get list of users that match name ==="
+ENDPOINT=/api/users?name=Cle
 echo ${STD_APP_URL}${ENDPOINT}
 curl -s -XGET  "${STD_APP_URL}${ENDPOINT}" | jq .
 echo

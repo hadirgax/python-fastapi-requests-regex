@@ -52,3 +52,12 @@ class UserDetails(BaseModel):
 
 class UsersListDetails(BaseModel):
     users: List[UserDetails]
+
+
+class UserIdName(BaseModel):
+    id: str
+    name: str
+
+
+class UsersListMatchName(BaseModel):
+    users: List[UserIdName]
